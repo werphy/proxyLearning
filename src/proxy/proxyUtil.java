@@ -16,7 +16,7 @@ public  class proxyUtil {
 			final Class<?> implClass)throws Exception {
 		return Proxy.newProxyInstance(interfaceClass.getClassLoader(),new Class[] { interfaceClass }, new InvocationHandler() {
 			/**
-			 * 当调用方法时会调用重写的InvocationHandler中的invoke方法，然后可以对方法进行判断拦截。
+			 * 当调用方法时会调用InvocationHandler中的invoke方法，然后可以对方法进行判断拦截。
 			 */
 			@Override
 			public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {		
